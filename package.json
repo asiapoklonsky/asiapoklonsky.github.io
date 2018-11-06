@@ -1,10 +1,13 @@
 {
   "name": "with-next-page-transitions",
+  "repository": "https://github.com/asiapoklonsky/asiapoklonsky.github.io.git",
   "version": "1.0.0",
   "scripts": {
     "dev": "next -p 8080",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "next export",
+    "deploy": "./scripts/deploy.sh"
   },
   "dependencies": {
     "next": "latest",
