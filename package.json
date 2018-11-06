@@ -6,7 +6,7 @@
     "dev": "next -p 8080",
     "build": "next build",
     "start": "next start",
-    "predeploy": "next export",
+    "predeploy": "npm run build && next export",
     "deploy": "./scripts/deploy.sh"
   },
   "dependencies": {
