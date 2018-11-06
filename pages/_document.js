@@ -21,14 +21,22 @@ export default class MyDocument extends Document {
             integrity='sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy'
             crossOrigin='anonymous'
           />
-          <style>{`
+          <link
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:300,400,500,600,700'
+            crossOrigin='anonymous'
+          />
+          <style global >{`
             body {
               overflow-y: scroll;
+              font-family: "Source Serif Pro",sans-serif;
             }
+          `}</style>
+            <style>{`
             .page {
               min-height: 100vh;
             }
-          `}</style>
+            `}</style>
         </Head>
         <body>
           <Main />
