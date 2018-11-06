@@ -4,6 +4,7 @@ GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO:-$(node -e 'process.stdout.write(require("./pa
 cd out && \
 $(npm bin)/rimraf .git
 touch .nojekyll && \
+mkdir foo && mv _next foo && \
 git init && \
 git add . && \
 git commit -m "Deploy to GitHub Pages" && \
