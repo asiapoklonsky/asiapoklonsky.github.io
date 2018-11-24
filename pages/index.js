@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 
-import img from './home.jpg'
 
 const Index = () => (
   <div className='page'>
@@ -60,7 +59,7 @@ const Index = () => (
         </Link>
       </div>
       <div className="link">
-        <Link href='/pink-matter'>
+        <Link href='/previous-projects'>
           <a className=''>Previous Projects</a>
         </Link>
       </div>
