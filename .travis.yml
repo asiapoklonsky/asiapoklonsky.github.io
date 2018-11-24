@@ -14,5 +14,11 @@ script:
 - npm run export
 before_script:
 - npm prune
-after_success:
-- bash ./scripts/deploy.sh
+deploy:
+  provider: pages
+  local-dir: out
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
