@@ -11,7 +11,7 @@ branches:
 notifications:
   email: false
 script:
-- npm run export
+- NODE_ENV=production npm run export
 before_script:
 - npm prune
 deploy:
