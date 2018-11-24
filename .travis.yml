@@ -12,7 +12,7 @@ notifications:
   email: false
 script:
 - NODE_ENV=production npm run export
-- bash ./fix_github_assets_prefix.sh
+- bash ./scripts/fix_github_assets_prefix.sh
 before_script:
 - npm prune
 deploy:
