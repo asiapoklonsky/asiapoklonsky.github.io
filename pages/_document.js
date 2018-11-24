@@ -26,7 +26,7 @@ export default class MyDocument extends Document {
             href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:300,400,500,600,700'
             crossOrigin='anonymous'
           />
-          <style global >{`
+          <style>{`
             body {
               overflow-y: scroll;
               font-family: "Source Serif Pro",sans-serif;
