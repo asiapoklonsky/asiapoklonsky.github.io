@@ -7,5 +7,7 @@ touch .nojekyll && \
 mkdir foo && mv _next foo && \
 git init && \
 git add . && \
+git config --global user.email "travis@travis-ci.org"
+git config --global user.name "Travis"
 git commit -m "Deploy to GitHub Pages" && \
 git push --force "${GIT_DEPLOY_REPO}" master
