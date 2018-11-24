@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO:-$(node -e 'process.stdout.write(require("./package.json").repository)')}
 
+./fix_github_assets_prefix.sh
 cd out && \
 $(npm bin)/rimraf .git
-touch .nojekyll && \
-mkdir foo && mv _next foo && \
 git init && \
 git add . && \
 git config --global user.email "travis@travis-ci.org"

@@ -1,12 +1,11 @@
 // next.config.js
 const withImages = require('next-images')
-const {PHASE_DEVELOPMENT_SERVER} = require('next/constants')
 const client = require('./client')
 const dev = process.env.NODE_ENV !== 'production'
 
 module.exports = (phase, {defaultConfig}) => {
   let assetPrefix = '';
-  if(phase !== PHASE_DEVELOPMENT_SERVER && !dev) {
+  if(!dev) {
     assetPrefix = '/foo';
   }
 
