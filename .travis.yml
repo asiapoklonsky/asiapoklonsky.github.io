@@ -14,10 +14,11 @@ script:
 - NODE_ENV=production npm run export
 - bash ./scripts/fix_github_assets_prefix.sh
 before_script:
+- cd frontend
 - npm prune
 deploy:
   provider: pages
-  local-dir: out
+  local-dir: frontend/out
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
