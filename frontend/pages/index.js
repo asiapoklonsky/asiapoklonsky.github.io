@@ -54,27 +54,27 @@ const Index = () => (
       `}</style>
       <h1>Asia Poklonsky</h1>
       <div className="link">
-        <Link href='/pink-matter'>
+        <Link prefetch href='/pink-matter'>
           <a className=''>Pink Matter</a>
         </Link>
       </div>
       <div className="link">
-        <Link href='/previous-projects'>
+        <Link prefetch href='/previous-projects'>
           <a className=''>Previous Projects</a>
         </Link>
       </div>
       <div className="link">
-        <Link href='/pink-matter'>
+        <Link prefetch href='/pink-matter'>
           <a className=''>Mood & Sketches</a>
         </Link>
       </div>
       <div className="link">
-        <Link href='/pink-matter'>
+        <Link prefetch href='/pink-matter'>
           <a className=''>Press</a>
         </Link>
       </div>
       <div className="link">
-        <Link href='/pink-matter'>
+        <Link prefetch href='/pink-matter'>
           <a className=''>About</a>
         </Link>
       </div>
