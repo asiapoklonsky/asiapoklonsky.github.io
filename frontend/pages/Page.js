@@ -101,7 +101,7 @@ text-decoration: none;
         }
         h1 {
           padding: 3rem 0;
-          font-size: 84px;
+          font-size: 70px;
           text-transform: uppercase;
         }
         .container {
@@ -109,6 +109,9 @@ text-decoration: none;
         }
         figure {
           text-align: center;
+        }
+        img {
+          max-width: 100%;
         }
         `}</style>
       <div className='box'>
