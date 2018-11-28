@@ -11,6 +11,19 @@ function urlFor(source) {
   return builder.image(source)
 }
 
+const BlockRenderer = props => {
+  const style = props.node.style || 'normal'
+
+  // if (/^h\d/.test(style)) {
+  //   const level = style.replace(/[^\d]/g, '')
+  //   return <h2 className={`my-heading level-${level}`}>{props.children}</h2>
+  // }
+
+  return style === 'with_background'
+    ? <p className="withBackground">{props.children}</p>
+    : <p>{props.children}</p>
+}
+
 class Page extends React.Component {
   static pageTransitionDelayEnter = true
 
@@ -85,25 +98,46 @@ text-decoration: none;
           <Link href='/'>{ "Asia Poklonsky" }</Link>
         </div>
         <style>{`
-        .box {
+        .withBackground::before,
+        .box::before {
+          content: '';
+          height: 80vh;
+          width: 100%;
           background-color: #EBCDE5;
+          position: absolute;
+          top: -10vh;
+          left: 0;
+          z-index: -1;
+        }
+        .box {
+          position: relative;
           color: #ED6B74;
           line-height: 1.8;
-          font-size: 14pt;
-          padding: 2rem 0;
+          font-size: 20px;
 
-          font-family: 'Adobe Ming Std L', serif;
+          font-family: Source Serif Pro,sans-serif;
+        }
+        p {
+          // margin: 7.5% auto;
+          padding: 0 20vw;
+        }
+        .withBackground {
+          position: relative;
+          background-color: #EBCDE5;
         }
         h1 {
-          padding: 3rem 0;
+          padding: 10% 20vw;
           font-size: 70px;
           text-transform: uppercase;
         }
         .container {
-          max-width: 1000px;
+          max-width: 100%;
+          padding: 0;
         }
         figure {
           text-align: center;
+          margin: 5% 0;
+          padding: 0 20vw;
         }
         img {
           max-width: 100%;
@@ -114,6 +148,7 @@ text-decoration: none;
           <h1>{ title }</h1>
           <BlockContent
             blocks={body}
+            serializers={{types: {block: BlockRenderer}}}
             projectId={client.clientConfig.projectId}
             dataset={client.clientConfig.dataset}
           />
