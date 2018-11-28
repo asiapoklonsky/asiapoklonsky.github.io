@@ -3,6 +3,7 @@ GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO:-$(node -e 'process.stdout.write(require("./pa
 
 ./fix_github_assets_prefix.sh
 cd out && \
+echo "asiapoklonsky.com" > CNAME && \
 $(npm bin)/rimraf .git
 git init && \
 git add . && \
