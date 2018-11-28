@@ -119,7 +119,7 @@ text-decoration: none;
           font-family: Source Serif Pro,sans-serif;
         }
         p {
-          padding: 10% 5vw;
+          padding: 1% 5vw;
           @media (min-width: 600px) {
             padding: 10% 20vw;
           }
