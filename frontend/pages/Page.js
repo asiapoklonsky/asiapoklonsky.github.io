@@ -82,6 +82,7 @@ class Page extends React.Component {
           position: fixed;
           top: 2rem;
           left: 2rem;
+          z-index: 2;
           }
           a, a:hover {
 text-decoration: none;
