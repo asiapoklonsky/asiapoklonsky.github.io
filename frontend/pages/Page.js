@@ -119,15 +119,20 @@ text-decoration: none;
           font-family: Source Serif Pro,sans-serif;
         }
         p {
-          // margin: 7.5% auto;
-          padding: 0 20vw;
+          padding: 10% 5vw;
+          @media (min-width: 600px) {
+            padding: 10% 20vw;
+          }
         }
         .withBackground {
           position: relative;
           background-color: #EBCDE5;
         }
         h1 {
-          padding: 10% 20vw;
+          padding: 10% 5vw;
+          @media (min-width: 600px) {
+            padding: 10% 20vw;
+          }
           font-size: 70px;
           text-transform: uppercase;
         }
@@ -138,7 +143,10 @@ text-decoration: none;
         figure {
           text-align: center;
           margin: 5% 0;
-          padding: 0 20vw;
+          padding: 10% 5vw;
+          @media (min-width: 600px) {
+            padding: 10% 20vw;
+          }
         }
         img {
           max-width: 100%;
