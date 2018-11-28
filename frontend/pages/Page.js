@@ -142,9 +142,10 @@ text-decoration: none;
         }
         figure {
           text-align: center;
-          margin: 5% 0;
-          padding: 10% 5vw;
+          margin: 0;
+          padding: 1% 5vw;
           @media (min-width: 600px) {
+            margin: 5% 0;
             padding: 10% 20vw;
           }
         }
