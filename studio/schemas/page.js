@@ -4,11 +4,6 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'in_navigation',
-      title: 'Visible in navigation',
-      type: 'boolean'
-    },
-    {
       name: 'title',
       title: 'Title',
       type: 'string'

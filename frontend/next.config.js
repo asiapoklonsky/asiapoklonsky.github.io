@@ -13,7 +13,7 @@ module.exports = (phase, {defaultConfig}) => {
     assetPrefix,
     exportPathMap: async function (defaultPathMap) {
       const paths = await client
-      .fetch('*[_type == "page" && defined(slug)].slug.current')
+      .fetch('*[_type == "page" && defined(slug) && title != "Homepage"].slug.current')
       .then(data => {
             console.log(data)
             return data.reduce(

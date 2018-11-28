@@ -4,6 +4,7 @@ import Link from 'next/link'
 import client from '../client'
 import BlockContent from '@sanity/block-content-to-react'
 import imageUrlBuilder from '@sanity/image-url'
+
 const builder = imageUrlBuilder(client)
 
 function urlFor(source) {
@@ -47,10 +48,6 @@ class Page extends React.Component {
       body = '',
     } = this.props
 
-    console.log(this.props)
-
-    if (!body) return null
-
     if (!this.state.loaded) return null
 
     const mainImageUrl = urlFor(mainImage).url()
@@ -85,9 +82,7 @@ text-decoration: none;
         `}</style>
         <div className="header"></div>
         <div className="mainTitle">
-          <Link href='/'>
-            <a className=''>Asia Poklonsky</a>
-          </Link>
+          <Link href='/'>{ "Asia Poklonsky" }</Link>
         </div>
         <style>{`
         .box {
