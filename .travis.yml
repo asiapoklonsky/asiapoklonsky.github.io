@@ -13,6 +13,7 @@ notifications:
 script:
 - NODE_ENV=production npm run export
 - bash ./scripts/fix_github_assets_prefix.sh
+- bash ./scripts/cname.sh
 before_script:
 - cd frontend
 - npm prune
