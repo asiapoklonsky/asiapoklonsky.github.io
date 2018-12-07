@@ -63,7 +63,7 @@ class Page extends React.Component {
 
     if (!this.state.loaded) return null
 
-    const mainImageUrl = urlFor(mainImage).url()
+    const mainImageUrl = urlFor(mainImage).url() + '?w=2000&h=2000&fit=max&fm=jpg';
 
     return (
       <div className='page'>
@@ -157,6 +157,7 @@ text-decoration: none;
         <div className='container'>
           <h1>{ title }</h1>
           <BlockContent
+            imageOptions={{w: 1000, h: 1000, fit: 'max', fm: 'jpg'}}
             blocks={body}
             serializers={{types: {block: BlockRenderer}}}
             projectId={client.clientConfig.projectId}

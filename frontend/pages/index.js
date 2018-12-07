@@ -31,7 +31,7 @@ class Index extends React.Component {
       navigationItems = [],
     } = this.props
 
-    const mainImageUrl = urlFor(mainImage).url()
+    const mainImageUrl = urlFor(mainImage).url() + '?w=1000&h=1000&fit=max&fm=jpg';
 
     const navigationLinks = navigationItems.map((item, i) => {
       const url = "/" + item.url
@@ -64,7 +64,7 @@ class Index extends React.Component {
           right: 0;
           height: 100vh;
           overflow: hidden;
-          // background-size: 100%;
+          background-size: cover;
           background-image: url(${mainImageUrl});
           background-position: top center;
           background-repeat: no-repeat;
