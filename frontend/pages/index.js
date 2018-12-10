@@ -31,7 +31,8 @@ class Index extends React.Component {
       navigationItems = [],
     } = this.props
 
-    const mainImageUrl = urlFor(mainImage).url() + '?w=1000&h=1000&fit=max&fm=jpg';
+    const mainImageForMobileUrl = urlFor(mainImage).url() + '?w=1000&h=1000&fit=max&fm=jpg';
+    const mainImageForDesktopUrl = urlFor(mainImage).url() + '?w=2000&h=2000&fit=max&fm=jpg';
 
     const navigationLinks = navigationItems.map((item, i) => {
       const url = "/" + item.url
@@ -65,9 +66,14 @@ class Index extends React.Component {
           height: 100vh;
           overflow: hidden;
           background-size: cover;
-          background-image: url(${mainImageUrl});
+          background-image: url(${mainImageForMobileUrl});
           background-position: top center;
           background-repeat: no-repeat;
+          }
+          @media (min-width: 1024px) {
+            .sidePanel {
+              background-image: url(${mainImageForDesktopUrl});
+            }
           }
           @media (min-width: 600px) {
           .navigation {

@@ -63,7 +63,8 @@ class Page extends React.Component {
 
     if (!this.state.loaded) return null
 
-    const mainImageUrl = urlFor(mainImage).url() + '?w=2000&h=2000&fit=max&fm=jpg';
+    const mainImageForMobileUrl = urlFor(mainImage).url() + '?w=800&h=800&fit=max&fm=jpg';
+    const mainImageForDesktopUrl = urlFor(mainImage).url() + '?w=2000&h=2000&fit=max&fm=jpg';
 
     return (
       <div className='page'>
@@ -74,9 +75,14 @@ class Page extends React.Component {
             width: 100%;
             height: 100vh;
             background-size: cover;
-            background-image: url(${mainImageUrl});
+            background-image: url(${mainImageForMobileUrl});
             background-position: center center;
             background-repeat: no-repeat;
+          }
+          @media (min-width: 1024px) {
+            .header {
+              background-image: url(${mainImageForDesktopUrl});
+            }
           }
           .mainTitle {
           position: fixed;
