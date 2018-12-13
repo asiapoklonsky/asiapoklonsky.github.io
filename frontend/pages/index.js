@@ -31,7 +31,7 @@ class Index extends React.Component {
       navigationItems = [],
     } = this.props
 
-    const mainImageForMobileUrl = urlFor(mainImage).url() + '?w=1000&h=1000&fit=max&fm=jpg';
+    const mainImageForMobileUrl = urlFor(mainImage).url() + '?w=800&h=800&fit=max&fm=jpg';
     const mainImageForDesktopUrl = urlFor(mainImage).url() + '?w=2000&h=2000&fit=max&fm=jpg';
 
     const navigationLinks = navigationItems.map((item, i) => {

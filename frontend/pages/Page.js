@@ -63,7 +63,7 @@ class Page extends React.Component {
 
     if (!this.state.loaded) return null
 
-    const mainImageForMobileUrl = urlFor(mainImage).url() + '?w=800&h=800&fit=max&fm=jpg';
+    const mainImageForMobileUrl = urlFor(mainImage).url() + '?w=500&h=500&fit=max&fm=jpg';
     const mainImageForDesktopUrl = urlFor(mainImage).url() + '?w=2000&h=2000&fit=max&fm=jpg';
 
     return (
